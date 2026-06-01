@@ -1,0 +1,26 @@
+{
+  "name": "querybridge-server",
+  "version": "3.0.0",
+  "description": "QueryBridge - Natural Language to SQL Compiler Backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "sql",
+    "query",
+    "compiler",
+    "nlp",
+    "database"
+  ],
+  "author": "QueryBridge Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "better-sqlite3": "^9.0.0"
+  }
+}

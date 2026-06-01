@@ -1,0 +1,418 @@
+.cdb-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cdb-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cdb-header h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cdb-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* ================= FORM STYLES ================= */
+
+.cdb-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.cdb-form-group {
+  margin-bottom: 30px;
+}
+
+.cdb-label {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.required {
+  color: #ff6b6b;
+  margin-right: 5px;
+}
+
+.cdb-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #2c3e50;
+}
+
+.cdb-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.cdb-help {
+  display: block;
+  margin-top: 8px;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* ================= COLUMNS LIST ================= */
+
+.cdb-columns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.cdb-column-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.cdb-column-inputs {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.cdb-input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cdb-input-wrapper small {
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.cdb-column-input,
+.cdb-column-select {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: white;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.cdb-column-input:focus,
+.cdb-column-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.cdb-remove-btn {
+  padding: 8px 12px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cdb-remove-btn:hover:not(:disabled) {
+  background-color: #ee5a4a;
+  transform: scale(1.05);
+}
+
+.cdb-remove-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ================= ADD COLUMN BUTTON ================= */
+
+.cdb-add-column-btn {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.cdb-add-column-btn:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ================= MESSAGES ================= */
+
+.cdb-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.cdb-message .icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.error-message {
+  background-color: #fee;
+  border-left: 4px solid #ff6b6b;
+  color: #c92a2a;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.cdb-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.cdb-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.cdb-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ================= REFERENCE SECTION ================= */
+
+.cdb-reference {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.cdb-reference h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cdb-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.type-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.type-card strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.type-card p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.type-card small {
+  display: block;
+  opacity: 0.9;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ================= EXAMPLES SECTION ================= */
+
+.cdb-examples {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.cdb-examples h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cdb-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.example-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  border-top: 4px solid #667eea;
+}
+
+.example-card h4 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.example-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-card li {
+  padding: 8px 0;
+  color: #2c3e50;
+  font-family: 'Courier New', monospace;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.example-card li:last-child {
+  border-bottom: none;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 768px) {
+  .cdb-container {
+    padding: 20px 15px;
+  }
+
+  .cdb-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .cdb-form {
+    padding: 20px;
+  }
+
+  .cdb-column-row {
+    flex-direction: column;
+  }
+
+  .cdb-column-inputs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cdb-remove-btn {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .cdb-types-grid,
+  .cdb-examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cdb-input-wrapper {
+    flex: 1;
+  }
+
+  .cdb-column-input,
+  .cdb-column-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cdb-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .cdb-form,
+  .cdb-reference,
+  .cdb-examples {
+    padding: 15px;
+  }
+
+  .cdb-label {
+    font-size: 0.95rem;
+  }
+
+  .cdb-input,
+  .cdb-column-input,
+  .cdb-column-select {
+    font-size: 16px;
+  }
+}
